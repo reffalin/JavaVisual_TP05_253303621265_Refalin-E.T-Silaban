@@ -122,6 +122,21 @@ public class Character {
         return hitPoints > 0;
     }
 
+    // Membandingkan karakter berdasarkan nama
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+        return true;
+        }
+
+        if (!(obj instanceof Character)) {
+        return false;
+        }
+
+        Character other = (Character) obj;
+        return name != null && name.equals(other.name);
+        }
+
     // Menampilkan informasi karakter
     @Override
     public String toString() {
